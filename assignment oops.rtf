@@ -1,0 +1,129 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil Calibri;}}
+{\*\generator Riched20 10.0.22621}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\b\f0\fs22\lang9                                           \fs48 ADVANCE PHP  ASSIGNMENT\par
+\fs28 What Is Object Oriented Programming?\par
+\b0 Object-oriented programming  is a programming paradigm that organizes data attributes with functions or methods into a unit known as an object. It is about modeling a system as a collection of objects, where each object represents some particular aspect of the system. Objects contain both functions or methods and data.\par
+\par
+OOP languages are class-based, meaning a class defines the data attributes and functions as a blueprint for creating objects, which are instances of the class.\par
+\b What Are Properties Of Object Oriented Systems? \b0\par
+Object-oriented systems are based on the concept of objects. An object is an instance of a class that contains data and methods. The properties of object-oriented systems include:\par
+\par
+Encapsulation: Encapsulation is the process of hiding the implementation details of an object from the outside world. It is achieved by making the data members private and providing public methods to access and modify them.\par
+\par
+Inheritance: Inheritance is the process of creating a new class from an existing class. The new class inherits all the properties and methods of the existing class and can add new properties and methods.\par
+\par
+Polymorphism: Polymorphism is the ability of an object to take on many forms. It allows objects of different classes to be treated as if they were objects of the same class.\par
+\par
+Abstraction: Abstraction is the process of hiding the complexity of a system and showing only the necessary details to the users. It is one of the most important features of object-oriented systems.\par
+ \b What Is Difference Between Class And Interface? \par
+\b0 In object-oriented programming, a class is a blueprint for creating objects. It defines a set of attributes and methods that are common to all objects of that class. An object is an instance of a class.\par
+\par
+An interface is similar to a class in that it defines a set of methods. However, an interface does not provide any implementation for those methods. Instead, it simply defines the method signatures that must be implemented by any class that implements the interface.\par
+\par
+The main difference between a class and an interface is that a class can provide both implementation and definition for its methods, while an interface can only provide the definition.\par
+\b\f1  What Is Overloading? \par
+\b0 In PHP, overloading provides a way to dynamically create properties and methods. These dynamic entities are processed via magic methods that one can establish in a class for various action types. The overloading methods are invoked when interacting with properties or methods that have not been declared or are not visible in the current scope.\par
+\par
+Function overloading or method overloading is a feature that allows creating several methods with the same name, which differ from each other in the type of input parameters. It is simply defined as the ability of one function to perform different tasks\par
+\b What are the differences between abstract classes and interfaces?\b0\par
+\par
+In PHP, an abstract class is a class that cannot be instantiated. It is used to provide a base class for other classes to inherit from. Abstract classes can contain both abstract and non-abstract methods. Abstract methods are declared but not implemented in the abstract class. They must be implemented in the child classes that inherit from the abstract class.\par
+\par
+An interface is a collection of abstract methods that define a contract for what a class can do. A class that implements an interface must implement all of the methods defined in the interface. Interfaces are used to define common behavior that can be shared across multiple classes.\par
+\par
+The main difference between an abstract class and an interface is that an abstract class can contain both abstract and non-abstract methods, while an interface can only contain abstract methods. Additionally, a class can only inherit from one abstract class, but it can implement multiple interfaces.\par
+\b Define Constructor and Destructor?\b0\par
+In PHP, a constructor is a special method that is called automatically when an object is created. It is used to initialize the object\rquote s properties before using them. Constructors are defined for a class by using PHP magic function __construct. \par
+The syntax for defining a constructor is as follows:\par
+\par
+class MyClass \{\par
+  function __construct() \{\par
+    // code to be executed\par
+  \}\par
+\}\par
+A destructor is another special method that is called automatically when an object is destroyed. It is used to perform any cleanup tasks that may be required before the object is destroyed. Destructors are defined for a class by using PHP magic function __destruct. \par
+The syntax for defining a destructor is as follows:\par
+\par
+class MyClass \{\par
+  function __destruct() \{\par
+    // code to be executed\par
+  \}\par
+\}\par
+\b How to Load Classes in PHP? \par
+\b0\f0\lang16393 We\f1\lang9  can load a class in PHP using the spl_autoload_register() function. This function registers any number of autoloaders, enabling for classes and interfaces to be automatically loaded if they are currently not defined. The class will be loaded from its corresponding \ldblquote .php\rdblquote  file when it comes into use for the first time.\par
+ \b How to Call Parent Constructor? \b0\par
+To call the constructor of the parent class from the constructor of the child class in PHP, you can use the parent::__construct() syntax. Here is an example:\par
+\par
+class Child extends Parent \{\par
+    public function __construct() \{\par
+        parent::__construct();\par
+    \}\par
+\}\par
+Copy\par
+In this example, the Child class extends the Parent class. The Child class has its own constructor that calls the constructor of the Parent class using the parent::__construct() syntax.\par
+\par
+\b  Are Parent Constructor Called Implicitly When Create An ObjectOf Class? \par
+\b0 In PHP, classes which have a constructor method call this method on each newly-created object, so it is suitable for any initialization that the object may need before it is used. However, parent constructors are not called implicitly if the child class defines a constructor\f0\lang16393 .\par
+ \b What Happen, If Constructor Is Defined As Private Or Protected? \b0\par
+If a constructor is defined as private or protected in PHP, then the class cannot be instantiated from outside of the class. You could create a public static function in the class that returns a new object, but you cannot create it directly if you want to have the constructor be protected or private.\par
+\b What are PHP Magic Methods/Functions? List them Write program for Static \par
+Keyword in PHP\b0 ?\par
+Magic methods are special methods that are automatically called when certain actions occur in PHP. They are also known as overloading methods. Here is a list of some of the magic methods in PHP:\par
+\par
+__construct()\par
+__destruct()\par
+__call()\par
+__callStatic()\par
+__get()\par
+__set()\par
+__isset()\par
+__unset()\par
+__sleep()\par
+__wakeup()\par
+__toString()\par
+__invoke()\par
+__set_state()\par
+__clone()\par
+__debugInfo()\par
+Here is an example program for the static keyword in PHP:\par
+\par
+<?php\par
+class MyClass \{\par
+  public static $myStaticProperty = "Hello World!";\par
+\}\par
+\par
+echo MyClass::$myStaticProperty;\par
+?>\par
+\b Create multiple Traits and use it in to a single class? \b0\par
+Yes, you can create multiple traits and use them in a single class. Here is an example:\par
+\par
+<?php\par
+trait Trait1 \{\par
+  public function method1() \{\par
+    echo "This is method 1 from Trait 1.";\par
+  \}\par
+\}\par
+\par
+trait Trait2 \{\par
+  public function method2() \{\par
+    echo "This is method 2 from Trait 2.";\par
+  \}\par
+\}\par
+\par
+class MyClass \{\par
+  use Trait1, Trait2;\par
+\}\par
+\par
+$obj = new MyClass();\par
+$obj->method1();\par
+$obj->method2();\par
+?>\par
+Copy\par
+This program will output \ldblquote This is method 1 from Trait 1.\rdblquote  and \ldblquote This is method 2 from Trait 2.\rdblquote  because we are using both traits in the class MyClass and calling their respective methods.\par
+\b Use of The $this keyword\b0\par
+In PHP, $this is a reserved keyword that refers to the calling object. It is usually the object to which the method belongs, but possibly another object if the method is called statically from the context of a secondary object. This keyword is only applicable to internal methods\par
+\b\lang9\par
+\b0\fs44\par
+\b\par
+}
+ 
